@@ -185,6 +185,15 @@ a {
   text-align: center;
 }
 
+.section--contact .section__copy {
+  margin-inline: auto;
+}
+
+.section--contact .section__text {
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
+
 .section__title {
   margin: 0 0 1.5rem;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
@@ -279,8 +288,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
+  box-sizing: border-box;
   width: min(100%, 15rem);
+  min-height: 14rem;
   margin-inline: auto;
   padding: 2rem 1.75rem;
   text-decoration: none;
@@ -294,14 +306,14 @@ a {
     transform 0.15s ease;
 }
 
-.project-card:hover,
-.project-card:focus-visible {
+a.project-card:hover,
+a.project-card:focus-visible {
   border-color: var(--gray-400);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
-.project-card:focus-visible {
+a.project-card:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -323,19 +335,26 @@ a {
   transition: color 0.15s ease;
 }
 
-.project-card:hover .project-card__url,
-.project-card:focus-visible .project-card__url {
+a.project-card:hover .project-card__url,
+a.project-card:focus-visible .project-card__url {
   color: var(--accent);
 }
 
-/* ——— contact ——— */
-
-.contact__intro {
-  margin: 0 auto 1.25rem;
-  max-width: 32ch;
-  font-size: 1.125rem;
-  color: var(--gray-600);
+.project-card--placeholder {
+  background: var(--gray-50);
+  border-style: dashed;
+  border-color: var(--gray-200);
+  cursor: default;
 }
+
+.project-card__logo--placeholder {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: var(--gray-500);
+}
+
+/* ——— contact ——— */
 
 .contact__email {
   display: inline-block;
@@ -401,12 +420,13 @@ a {
   }
 
   .project-lockup {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 15rem 1fr;
     gap: 2rem;
     align-items: center;
   }
 
   .project-card {
+    width: 15rem;
     margin-inline: 0;
   }
 }
@@ -419,12 +439,14 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   .project-card,
+  a.project-card:hover,
+  a.project-card:focus-visible,
   .contact__email {
     transition: none;
   }
 
-  .project-card:hover,
-  .project-card:focus-visible {
+  a.project-card:hover,
+  a.project-card:focus-visible {
     transform: none;
   }
 }
