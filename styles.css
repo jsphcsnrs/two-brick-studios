@@ -154,6 +154,16 @@ a {
 .section--studio {
   background: var(--gray-50);
   border-block: 1px solid var(--gray-100);
+  text-align: center;
+}
+
+.section--studio .section__copy {
+  margin-inline: auto;
+}
+
+.section--studio .section__lede,
+.section--studio .section__text {
+  margin-inline: auto;
 }
 
 .section--projects {
@@ -167,7 +177,7 @@ a {
 }
 
 .section__title {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -204,7 +214,7 @@ a {
 }
 
 .section__title-brand {
-  margin-left: 0.15em;
+  margin-left: 0.35em;
   font-weight: 700;
 }
 
