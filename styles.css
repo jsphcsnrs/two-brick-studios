@@ -166,6 +166,10 @@ a {
   margin-inline: auto;
 }
 
+.section--studio .section__text del {
+  text-decoration: line-through;
+}
+
 .section--projects {
   background: var(--white);
 }
@@ -196,7 +200,7 @@ a {
 
 .section__text {
   margin: 0;
-  max-width: 42ch;
+  max-width: 48ch;
   color: var(--gray-600);
 }
 
