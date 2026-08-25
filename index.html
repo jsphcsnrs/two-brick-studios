@@ -58,66 +58,40 @@
 
       <section class="section section--projects" aria-labelledby="projects-heading">
         <div class="container">
-          <div class="section__header">
-            <h2 id="projects-heading" class="section__title">projects</h2>
-            <p class="section__subtitle">
-              Each project stands on its own — different brand, different vibe.
-            </p>
-          </div>
+          <h2 id="projects-heading" class="section__title">projects</h2>
 
-          <article class="project">
-            <div class="project__info">
-              <h3 class="project__name">Cocktail Curator</h3>
-              <p class="project__desc">
-                A cocktail recipe app for iOS and Android. Clean, focused, and built for people
-                who care about drinks and hate clutter.
-              </p>
+          <ul class="project-list">
+            <li class="project-lockup">
               <a
-                class="project__link"
+                class="project-card"
                 href="https://cocktailcurator.app/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-describedby="project-cc-desc"
               >
-                cocktailcurator.app
-                <span aria-hidden="true">↗</span>
+                <img
+                  class="project-card__logo"
+                  src="https://cocktailcurator.app/LemonTwist_NoBg.svg"
+                  alt=""
+                  width="64"
+                  height="64"
+                />
+                <span class="project-card__name">Cocktail Curator</span>
+                <span class="project-card__url">cocktailcurator.app</span>
                 <span class="visually-hidden">(opens in new tab)</span>
               </a>
-            </div>
-
-            <div class="preview">
-              <div class="preview__chrome">
-                <span class="preview__dot"></span>
-                <span class="preview__dot"></span>
-                <span class="preview__dot"></span>
-                <span class="preview__url">cocktailcurator.app</span>
+              <div id="project-cc-desc" class="project-lockup__copy">
+                <p class="project-lockup__lede">
+                  A cocktail recipe app that puts your home bar in your pocket.
+                </p>
+                <p class="project-lockup__desc">
+                  Discover craft recipes and see exactly what you can mix right now. Track your
+                  inventory, get smart recommendations on what bottle to buy next, and elevate
+                  your drink game.
+                </p>
               </div>
-              <a
-                class="preview__panel"
-                href="https://cocktailcurator.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="preview__panel-inner">
-                  <img
-                    class="preview__logo"
-                    src="https://cocktailcurator.app/LemonTwist_NoBg.svg"
-                    alt=""
-                    width="64"
-                    height="64"
-                  />
-                  <p class="preview__panel-title">Cocktail Curator</p>
-                  <p class="preview__panel-tagline">
-                    Modern &amp; classic cocktails, filtered by ingredients and flavor.
-                  </p>
-                  <span class="preview__panel-cta">
-                    Visit live site
-                    <span aria-hidden="true">↗</span>
-                  </span>
-                </div>
-                <span class="visually-hidden">(opens in new tab)</span>
-              </a>
-            </div>
-          </article>
+            </li>
+          </ul>
         </div>
       </section>
 
